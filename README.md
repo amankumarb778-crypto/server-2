@@ -1,32 +1,47 @@
-Product Management REST API
+# 🛒 PRODUCT MANAGEMENT REST API
 
 A RESTful API built using Node.js, Express.js, and CORS for managing products.
-This API supports product creation, updating, filtering, and category-based retrieval.
 
-🚀 Tech Stack
+This API supports:
+- Product creation
+- Full product updates
+- Stock updates
+- Price updates
+- Category-based filtering
+- Product retrieval
 
-Node.js
+---
 
-Express.js
+# 🚀 TECH STACK
 
-CORS
+- Node.js
+- Express.js
+- CORS
+- ES Modules (import/export)
 
-ES Modules (import/export)
+---
 
-🌍 Base URL
+# 🌍 BASE URL
+
 http://localhost:3002
-📌 API Endpoints
-1️⃣ Get All Products
-GET /products
+
+---
+
+# 📌 API ENDPOINTS
+
+---
+
+## 1️⃣ GET ALL PRODUCTS
+
+### GET /products
 
 Returns all products.
 
-Example
-
+### Example
 http://localhost:3002/products
 
-Response
-
+### Response
+```json
 [
   {
     "id": 1,
@@ -37,17 +52,21 @@ Response
     "rating": 4.3
   }
 ]
-2️⃣ Get Product By ID
-GET /products/:id
+```
+
+---
+
+## 2️⃣ GET PRODUCT BY ID
+
+### GET /products/:id
 
 Returns a single product by ID.
 
-Example
-
+### Example
 http://localhost:3002/products/1
 
-Success Response
-
+### Success Response
+```json
 {
   "id": 1,
   "name": "Wireless Mouse",
@@ -56,27 +75,36 @@ Success Response
   "stock": 25,
   "rating": 4.3
 }
+```
 
-Error
-
+### Error Response
+```json
 {
   "message": "Product not found"
 }
-3️⃣ Get Products By Category
-GET /products/category/:categoryName
+```
+
+---
+
+## 3️⃣ GET PRODUCTS BY CATEGORY
+
+### GET /products/category/:categoryName
 
 Filters products by category.
 
-Example
-
+### Example
 http://localhost:3002/products/category/Electronics
-4️⃣ Create New Product
-POST /products
+
+---
+
+## 4️⃣ CREATE NEW PRODUCT
+
+### POST /products
 
 Creates a new product.
 
-Request Body
-
+### Request Body
+```json
 {
   "id": 6,
   "name": "Bluetooth Speaker",
@@ -85,20 +113,26 @@ Request Body
   "stock": 15,
   "rating": 4.6
 }
+```
 
-Response
-
+### Response
+```json
 {
   "message": "Product created successfully",
   "product": { ... }
 }
-5️⃣ Update Full Product
-PUT /products/:id
+```
+
+---
+
+## 5️⃣ UPDATE FULL PRODUCT
+
+### PUT /products/:id
 
 Updates complete product details (except ID).
 
-Request Body
-
+### Request Body
+```json
 {
   "name": "Gaming Mouse",
   "category": "Electronics",
@@ -106,27 +140,43 @@ Request Body
   "stock": 20,
   "rating": 4.7
 }
-6️⃣ Update Product Stock
-PUT /products/:id/stock
+```
+
+---
+
+## 6️⃣ UPDATE PRODUCT STOCK
+
+### PUT /products/:id/stock
 
 Updates only stock value.
 
-Request Body
-
+### Request Body
+```json
 {
   "stock": 30
 }
-7️⃣ Update Product Price
-PUT /products/:id/price
+```
+
+---
+
+## 7️⃣ UPDATE PRODUCT PRICE
+
+### PUT /products/:id/price
 
 Updates only price value.
 
-Request Body
-
+### Request Body
+```json
 {
   "price": 899
 }
-📦 Product Data Structure
+```
+
+---
+
+# 📦 PRODUCT DATA STRUCTURE
+
+```json
 {
   "id": Number,
   "name": String,
@@ -135,9 +185,16 @@ Request Body
   "stock": Number,
   "rating": Number
 }
-🛠 Installation
+```
+
+---
+
+# 🛠 INSTALLATION
+
+```bash
 npm install
 node server.js
+```
 
 Server runs at:
 
