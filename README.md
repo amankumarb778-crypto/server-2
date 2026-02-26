@@ -20,6 +20,9 @@ https://github.com/amankumarb778-crypto/server-2.git
 ### 🚀 Live Deployment (Render)
 https://server-2-d63m.onrender.com
 
+### 📘 Postman API Documentation
+https://documenter.getpostman.com/view/50839281/2sBXcGFfni
+
 ---
 
 # 🚀 TECH STACK
@@ -33,10 +36,10 @@ https://server-2-d63m.onrender.com
 
 # 🌍 BASE URL
 
-Local:
+### Local
 http://localhost:3002
 
-Production:
+### Production
 https://server-2-d63m.onrender.com
 
 ---
@@ -46,22 +49,15 @@ https://server-2-d63m.onrender.com
 ---
 
 ## 1️⃣ GET ALL PRODUCTS
+GET /products
 
-### GET /products
-
-Returns all products.
-
-### Example (Local)
-http://localhost:3002/products
-
-### Example (Production)
+Example:
 https://server-2-d63m.onrender.com/products
 
 ---
 
 ## 2️⃣ GET PRODUCT BY ID
-
-### GET /products/:id
+GET /products/:id
 
 Example:
 https://server-2-d63m.onrender.com/products/1
@@ -69,8 +65,7 @@ https://server-2-d63m.onrender.com/products/1
 ---
 
 ## 3️⃣ GET PRODUCTS BY CATEGORY
-
-### GET /products/category/:categoryName
+GET /products/category/:categoryName
 
 Example:
 https://server-2-d63m.onrender.com/products/category/Electronics
@@ -78,50 +73,22 @@ https://server-2-d63m.onrender.com/products/category/Electronics
 ---
 
 ## 4️⃣ CREATE NEW PRODUCT
-
-### POST /products
-
-### Request Body
-```json
-{
-  "id": 6,
-  "name": "Bluetooth Speaker",
-  "category": "Electronics",
-  "price": 1999,
-  "stock": 15,
-  "rating": 4.6
-}
-```
+POST /products
 
 ---
 
 ## 5️⃣ UPDATE FULL PRODUCT
-
-### PUT /products/:id
+PUT /products/:id
 
 ---
 
 ## 6️⃣ UPDATE PRODUCT STOCK
-
-### PUT /products/:id/stock
-
-```json
-{
-  "stock": 30
-}
-```
+PUT /products/:id/stock
 
 ---
 
 ## 7️⃣ UPDATE PRODUCT PRICE
-
-### PUT /products/:id/price
-
-```json
-{
-  "price": 899
-}
-```
+PUT /products/:id/price
 
 ---
 
@@ -148,8 +115,4 @@ node server.js
 ```
 
 Server runs at:
-http://localhost:3002
-
-Server runs at:
-
 http://localhost:3002
