@@ -12,6 +12,16 @@ This API supports:
 
 ---
 
+# 🔗 PROJECT LINKS
+
+### 📂 GitHub Repository
+https://github.com/amankumarb778-crypto/server-2.git
+
+### 🚀 Live Deployment (Render)
+https://server-2-d63m.onrender.com
+
+---
+
 # 🚀 TECH STACK
 
 - Node.js
@@ -23,7 +33,11 @@ This API supports:
 
 # 🌍 BASE URL
 
+Local:
 http://localhost:3002
+
+Production:
+https://server-2-d63m.onrender.com
 
 ---
 
@@ -37,22 +51,11 @@ http://localhost:3002
 
 Returns all products.
 
-### Example
+### Example (Local)
 http://localhost:3002/products
 
-### Response
-```json
-[
-  {
-    "id": 1,
-    "name": "Wireless Mouse",
-    "category": "Electronics",
-    "price": 799,
-    "stock": 25,
-    "rating": 4.3
-  }
-]
-```
+### Example (Production)
+https://server-2-d63m.onrender.com/products
 
 ---
 
@@ -60,29 +63,8 @@ http://localhost:3002/products
 
 ### GET /products/:id
 
-Returns a single product by ID.
-
-### Example
-http://localhost:3002/products/1
-
-### Success Response
-```json
-{
-  "id": 1,
-  "name": "Wireless Mouse",
-  "category": "Electronics",
-  "price": 799,
-  "stock": 25,
-  "rating": 4.3
-}
-```
-
-### Error Response
-```json
-{
-  "message": "Product not found"
-}
-```
+Example:
+https://server-2-d63m.onrender.com/products/1
 
 ---
 
@@ -90,18 +72,14 @@ http://localhost:3002/products/1
 
 ### GET /products/category/:categoryName
 
-Filters products by category.
-
-### Example
-http://localhost:3002/products/category/Electronics
+Example:
+https://server-2-d63m.onrender.com/products/category/Electronics
 
 ---
 
 ## 4️⃣ CREATE NEW PRODUCT
 
 ### POST /products
-
-Creates a new product.
 
 ### Request Body
 ```json
@@ -115,32 +93,11 @@ Creates a new product.
 }
 ```
 
-### Response
-```json
-{
-  "message": "Product created successfully",
-  "product": { ... }
-}
-```
-
 ---
 
 ## 5️⃣ UPDATE FULL PRODUCT
 
 ### PUT /products/:id
-
-Updates complete product details (except ID).
-
-### Request Body
-```json
-{
-  "name": "Gaming Mouse",
-  "category": "Electronics",
-  "price": 999,
-  "stock": 20,
-  "rating": 4.7
-}
-```
 
 ---
 
@@ -148,9 +105,6 @@ Updates complete product details (except ID).
 
 ### PUT /products/:id/stock
 
-Updates only stock value.
-
-### Request Body
 ```json
 {
   "stock": 30
@@ -163,9 +117,6 @@ Updates only stock value.
 
 ### PUT /products/:id/price
 
-Updates only price value.
-
-### Request Body
 ```json
 {
   "price": 899
@@ -189,12 +140,15 @@ Updates only price value.
 
 ---
 
-# 🛠 INSTALLATION
+# 🛠 INSTALLATION (LOCAL SETUP)
 
 ```bash
 npm install
 node server.js
 ```
+
+Server runs at:
+http://localhost:3002
 
 Server runs at:
 
